@@ -1,0 +1,116 @@
+/* You can add mixins to this file*/
+/*px to rem mixin*/
+
+@function parseInt($n) {
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rotate($x) {
+    -moz-transform:    rotate($x);
+    -o-transform:      rotate($x);
+    -webkit-transform: rotate($x);
+    -ms-transform: rotate($x);
+    transform:         rotate($x);
+}
+@mixin rotateY($x) {
+    -moz-transform:    rotateY($x);
+    -o-transform:      rotateY($x);
+    -webkit-transform: rotateY($x);
+    -ms-transform: rotateY($x);
+    transform:         rotateY($x);
+}
+@mixin box-shadow($shadow...) {
+  -moz-box-shadow: $shadow;
+  -ms-box-shadow: $shadow;
+  -o-box-shadow: $shadow;
+  -webkit-box-shadow: $shadow; 
+          box-shadow: $shadow;
+}
+
+ /*Transforms */
+@mixin transform($property){
+    transform: $property;
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+}
+
+
+/* Text Truncate */
+@mixin text-truncate($truncation-boundary) {    
+  max-width: $truncation-boundary;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Absolute Positioned */
+@mixin abs-pos ($top: auto, $right: auto, $bottom: auto, $left: auto){
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    position: absolute;
+}
+@mixin alinks($primary){
+    a{
+        /*color: $primary;*/
+        &:hover{
+            color: $primary;
+        }
+        &:active{
+            color: $primary;
+        }
+        &:focus{
+            color: $primary;
+        }
+    }
+}
+
+ /* Border Radius */
+ @mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+/* Animation */
+@mixin animation($animation) {
+    animation: $animation;
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -ms-animation: $animation;
+    -o-animation: $animation;
+}
+
+/* Animation */
+@mixin animation-delay($delay) {
+    animation-delay: $delay;
+    -webkit-animation-delay: $delay;
+    -moz-animation-delay: $delay;
+    -ms-animation-delay: $delay;
+    -o-animation-delay: $delay;
+}
+
+/* KeyFrames */
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+ 
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+
+    @keyframes #{$name} {
+        @content;
+    }
+}
+

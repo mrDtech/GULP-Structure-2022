@@ -1,0 +1,20 @@
+@import "vendor/bootstrap/scss/bootstrap";
+@import "vendor/select2/scss/core";
+@import "vendor/fontawesome/fontawesome.min";
+@import "vendor/mcustomscrollbar/mcustomscrollbar";
+
+@import "mixins";
+@import "variables";
+
+@import "component/typography";
+@import "component/button";
+@import "component/form";
+@import "component/modal";
+@import "component/table";
+@import "component/tabs";
+@import "component/accordion";
+@import "component/navigationMenu";
+
+@import "pages/login";
+@import "pages/dashboard";
+@import "main";
